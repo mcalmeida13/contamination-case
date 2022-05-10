@@ -1,13 +1,13 @@
 # Predição de probabilidade de contaminação viral utilizando Machine Learning 
 
-
+Modelos em `pickle` estão neste [link](https://drive.google.com/drive/folders/1xazOjz_ithb_9kDHBZyc1F-Unb46CMaf?usp=sharing)
 ## 1) Definição do problema: 
 
 ### Que problema estamos tentando resolver?  
 
 Este case tem como objetivo avaliar os níveis de contaminação de um vírus no país X, gerando insights através de dados fornecidos pelo Gorverno.
 
-![alt text](https://github.com/mcalmeida13/neoway-case/blob/main/img/2022-05-04_14-56.png?raw=true)
+![alt text](https://github.com/mcalmeida13/contamination-case/blob/main/img/2022-05-04_14-56.png?raw=true)
 
 
 
@@ -17,7 +17,7 @@ Sabe-se que a transmissão acontece de pessoa por pessoa, por isso elas devem es
 Já foi repassado também que a porbabilidade transmissão de um indivíduo A para B não é igual a de B para A, o que sugere que os atributos de cada indivíduo contribuem para a probabilidade de adoecer
 
 
-![alt text](https://github.com/mcalmeida13/neoway-case/blob/main/img/2022-05-04_15-08.png?raw=true)
+![alt text](https://github.com/mcalmeida13/contamination-case/blob/main/img/2022-05-04_15-08.png?raw=true)
 
 Foi fornecido outro dataset onde cada linha representa um indivíduo e um conjunto de atributos associados.
 
@@ -67,7 +67,7 @@ lista das conexões e algumas características das mesmas
 
 Para gerar o dataset, precisamos fazer a ligação de duas cópias do dataset das características individuais das pessoas com seu nível de proximidade
 
-![alt text](https://github.com/mcalmeida13/neoway-case/blob/main/img/2022-05-04_17-22.png?raw=true)
+![alt text](https://github.com/mcalmeida13/contamination-case/blob/main/img/2022-05-04_17-22.png?raw=true)
 
 O dataset para treinar o modelo (`df_known`) será aquele que a variável `prob_V1_V2` será não nula e o dataset para entregar ao cliente será o que utulizaremos o modelo para prever a probabilidade (`df_unknown`) 
 
@@ -95,7 +95,7 @@ Projeto está estruturado da seguinte forma:
 Métrica escolhida foi o Erro absoluto médio (Mean squared error - MAE) por serem números menores que, a métrica de erro médio quadrado mascararia a acurácia do modelo.
 Modelo final performou com `MAE = 0.037` o que gera uma medição `predicto(%) = real(%) ± 3.7%`
 
-![alt text](https://github.com/mcalmeida13/neoway-case/blob/main/img/model_result.png?raw=true)
+![alt text](https://github.com/mcalmeida13/contamination-case/blob/main/img/model_result.png?raw=true)
 
 O modelo treinado está salvo nesse repositório como `rf_final.pkl`
 
